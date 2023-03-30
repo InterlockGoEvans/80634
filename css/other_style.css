@@ -64,7 +64,7 @@ h1, h2, h3 {
 .image-container {
 position: relative;
 width: 100%; /* set the width to 100% to make the images span the entire container */
-height: 300px;
+height: 500px;
 overflow: hidden;
 text-align: center; / *horizontally center the images within the container */
 }
