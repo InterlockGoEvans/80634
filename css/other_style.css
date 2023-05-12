@@ -62,7 +62,7 @@ h1, h2, h3 {
 }
 
 .background-image {
-  background-image: url("https://github.com/InterlockGoEvans/80620/images/puppy.jpg");
+  background-image: <img src="images/interlockgo-noco_logo.png">;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
