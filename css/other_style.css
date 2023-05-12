@@ -23,6 +23,15 @@ nav {
   color: #fff;
   padding: 10px;
 }
+.logo-container {
+  text-align: center; /* Center align the logo and heading */
+}
+
+.logo-container img {
+  height: auto; /* Remove the fixed height */
+  max-width: 100%; /* Ensure the logo adjusts to the container's width */
+  margin-bottom: 20px; /* Add some space between the logo and heading */
+}
 
 nav ul {
   margin: 0;
