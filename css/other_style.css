@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  padding: 20px 0; /* add 20 pixels of padding to the top and bottom */
+  padding: 20px 0;
   font-family: Arial, sans-serif;
   font-size: 16px;
 }
@@ -23,14 +23,15 @@ nav {
   color: #fff;
   padding: 10px;
 }
+
 .logo-container {
-  text-align: center; /* Center align the logo and heading */
+  text-align: center;
 }
 
 .logo-container img {
-  height: auto; /* Remove the fixed height */
-  max-width: 100%; /* Ensure the logo adjusts to the container's width */
-  margin-bottom: 20px; /* Add some space between the logo and heading */
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 20px;
 }
 
 nav ul {
@@ -59,11 +60,11 @@ nav a:hover {
 }
 
 main {
-  margin: 0 20px; /* reduce the margin to 0 on the top and bottom, and add 20 pixels to the left and right */
+  margin: 0 20px;
 }
 
 section {
-  margin: 20px 0; /* add 20 pixels of margin to the top and bottom */
+  margin: 20px 0;
 }
 
 h1, h2, h3 {
@@ -73,48 +74,4 @@ h1, h2, h3 {
 .background-image {
   background-image: url('https://github.com/InterlockGoEvans/80620/raw/main/images/puppy.jpg');
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-.image-container {
-position: relative;
-width: 100%; /* set the width to 100% to make the images span the entire container */
-height: 500px;
-overflow: hidden;
-text-align: center; / *horizontally center the images within the container */
-}
-
-.image-container img {
-display: inline-block; /* change the display property to inline-block */
-width: 30%;
-height: 100%; /*set the height to 100% to make the images the same height as the container */
-margin: 0 10px; /* add some margin to the left and right of each image for spacing */
-transition: all 0.3s ease;
-}
-
-ul {
-  list-style: none;
-}
-
-footer {
-  background-color: #3d3d3d;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-}
-
-footer a {
-  color: #fff;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
+  background-position: center
