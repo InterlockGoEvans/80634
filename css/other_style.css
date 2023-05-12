@@ -83,7 +83,7 @@ h1, h2, h3 {
 }
 
 .background-image {
-  background-image: url('/images/puppy.JPG');
+  background-image: url('images/puppy.JPG');
   background-size: cover;
   background-position: center
 }
