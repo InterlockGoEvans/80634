@@ -61,6 +61,13 @@ h1, h2, h3 {
   font-weight: normal;
 }
 
+.background-image {
+  background-image: url('path/to/your/image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .image-container {
 position: relative;
 width: 100%; /* set the width to 100% to make the images span the entire container */
