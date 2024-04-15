@@ -28,6 +28,7 @@ nav {
 .logo-container img {
   max-height: 300px; /* Adjust the max-height value to your desired size */
   width: auto;
+  margin-left:20px;
   margin-bottom: 20px;
 }
 
