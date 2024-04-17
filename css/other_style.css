@@ -65,16 +65,18 @@ main {
 }
 
 .image-container {
-  display: flex; /* Use flexbox to arrange the images in a row */
+  display: flex;
   justify-content: center; /* Center align the images horizontally */
   align-items: center; /* Center align the images vertically */
-  
 }
 
 .image-container img {
-  width: 50vw; /* Remove the fixed width */
-  height: 50vh; /* Remove the fixed height */
+  flex: 1; /* Each image takes up equal space */
+  max-width: calc(33.33% - 10px); /* Adjust as needed for spacing */
+  max-height: 100%; /* Maintain aspect ratio */
+  margin: 0 5px; /* Add space between images */
 }
+
 
 
 section {
