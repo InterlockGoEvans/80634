@@ -10,8 +10,7 @@ body {
   font-family: Arial, sans-serif;
   font-size: 40px;
   /*background-color: black;*/
-  background-image: url('images/puppy.JPG');
-  opacity: 0.5;
+  background-image: url('../images/puppy.JPG');
 }
 
 
