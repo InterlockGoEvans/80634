@@ -24,11 +24,11 @@ body {
 }
 
 h2 {
-  text-align: left;
+  text-align: center;
   text-decoration: underline;
   font-size: 24pt;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: var(--favcolor);
 }
 
@@ -107,14 +107,14 @@ hr {
 }
 
 footer {
-  background-color: #3d3d3d;
-  color: #fff;
+  background-color: #76BC21;
+  color: #371515;
   padding: 10px;
   text-align: center;
 }
 
 footer a {
-  color: #fff;
+  color: #801919;
   text-decoration: none;
 }
 

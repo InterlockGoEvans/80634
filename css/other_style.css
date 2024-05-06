@@ -9,8 +9,7 @@ body {
   padding: 20px 0;
   font-family: Arial, sans-serif;
   font-size: 40px;
-  /*background-color: black;*/
-  background-image: url('../images/puppy.JPG');
+  background-image: linear-gradient(to bottom, #1C355E, #fff, #00ff00);
 }
 
 
@@ -28,7 +27,7 @@ nav {
 }
 
 .logo-container img {
-  max-height: 300px; /* Adjust the max-height value to your desired size */
+  max-height: auto; /* Adjust the max-height value to your desired size */
   width: auto;
   margin-left:20px;
   margin-bottom: 20px;
@@ -64,23 +63,35 @@ main {
   margin: 0 20px;
 }
 
-.image-container {
-  display: flex;
-  justify-content: center; /* Center align the images horizontally */
-  align-items: center; /* Center align the images vertically */
+/* General styling for the section */
+.image-gallery {
+  margin: 10px 0; /* Provides some space above and below the section */
+  padding: 5px; /* Adds padding around the content */
+  background-color: #f4f4f4; /* Light grey background for the section */
+  border: 1px solid #ccc; /* Grey border for the section */
 }
 
-.image-container img {
-  flex: 1; /* Each image takes up equal space */
-  max-width: calc(33.33% - 10px); /* Adjust as needed for spacing */
-  max-height: 100%; /* Maintain aspect ratio */
-  margin: 0 5px; /* Add space between images */
+/* Styling for the container that holds images */
+.image-container {
+  display: flex; /* Enables flexbox layout */
+  justify-content: space-around; /* Distributes space around items */
+  align-items: center; /* Vertically centers the images */
+  gap: 10px; /* Provides space between the images */
 }
+
+/* Styling for each image within the container */
+.image-container img {
+  flex: 1; /* Each image will grow to fill the space */
+  max-width: 30%; /* Maximum width for each image */
+  height: auto; /* Auto-adjust height to maintain aspect ratio */
+  margin: 0 5px; /* Horizontal margin between images */
+}
+
 
 
 
 section {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 h1, h2, h3 {
