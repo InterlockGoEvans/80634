@@ -1,0 +1,84 @@
+body {
+  margin: 3px;                  /* No space on the edges of the page */
+  padding: 10px;            /* Space on the top and bottom inside the page */
+  font-family: 'Times New Roman', serif;  /* The style of the writing */
+  font-size: 30px;            /* How big the letters are */
+  text-decoration: underline; /* A line under the text */
+  background-image: url(../images/interlockgo_logo_gradient.png); /* Picture behind the words */
+  background-attachment: fixed; 
+  background-size:cover;
+  background-position: center;
+}
+
+header {
+  display: flex;              /* Makes things line up nicely */
+  flex-direction: column;     /* Stack things on top of each other */
+  align-items: center;        /* Center things across the page */
+  justify-content: center;    /* Center things down the page */
+}
+
+nav {
+  background-color: #1b345d; /* Color the navigation bar dark blue */
+  color: white;              /* Make the text color white */
+  display: flex;             /* Line up the links nicely */
+  justify-content: flex-start; /* Align links to the left */
+  padding: 5px;              /* Small space around the navigation bar */
+  align-items: center;       /* Centers items vertically within the nav */
+}
+
+nav ul {
+  display: flex;             /* Ensures that list items are in a row */
+  width: 100%;               /* Ensures ul takes full width of nav */
+  list-style: none;          /* Removes bullet points from list */
+  padding: 0;                /* Removes default padding */
+  margin: 0;                 /* Removes default margin */
+}
+
+nav a {
+  color: white;              /* Make the links white */
+  padding: 10px 15px;             /* Space around the links */
+  text-decoration: none;     /* No underline for the links */
+  position: relative;        /* Needed for positioning the pseudo-element */
+}
+
+nav a::after {
+  content: "|";              /* The separator symbol */
+  color: white;              /* Color of the separator */
+  position: left;        /* Position absolutely relative to the link */
+  right: 0;               /* Position right of the link */
+  top: 0;                    /* Align top with the link */
+}
+
+nav a:last-child::after {
+  content: none;             /* No separator after the last link */
+}
+
+nav a:hover {
+  background-color: green;   /* Change background to green when you hover over links */
+  color: dark blue;          /* Change text color to dark blue when you hover over links */
+}
+
+main {
+  margin: 10px 10px;             /* Space on the sides inside the main area */
+}
+
+.image-gallery {
+  background-color: light grey; /* Light grey background for pictures */
+  border: 5px solid grey;     /* Grey line around the picture area */
+  padding: 5px;               /* Small space inside the picture area */
+  margin: 10px;             /* Space above and below the picture area */
+}
+
+.image-container {
+  display: flex;              /* Line up the pictures nicely */
+  justify-content: space-around; /* Spread out the pictures evenly */
+  align-items: top;        /* Center the pictures up and down */
+  gap: 10px;                  /* Space between the pictures */
+}
+
+.image-container img {
+  flex: 1;                    /* Make pictures flexible in size */
+  max-width: 30%;             /* Limit how wide the pictures can be */
+  height: 50%;               /* Make the height adjust automatically */
+  margin: 0 5px;              /* Space on the sides of each picture */
+}
