@@ -64,37 +64,33 @@ main {
   margin: 10px 10px;             /* Space on the sides inside the main area */
 }
 
-.image-gallery {
-  background-color: light grey; /* Light grey background for pictures */
-  border: 5px solid grey;     /* Grey line around the picture area */
-  padding: 5px;               /* Small space inside the picture area */
-  margin: 10px;             /* Space above and below the picture area */
-}
+/* Add these styles to your index.css file */
 
 .image-container {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 10px;
-  max-height: auto;
-  margin-top: 20%;
+  flex-wrap: wrap;
+  background-color: #ccc; /* Light gray background */
+  justify-content: center; /* Centers the images horizontally */
+  align-items: flex-start; /* Aligns images at the top */
+  padding: 20px; /* Adds some space inside the container */
 }
 
-.image-container .image-fc100 img {
-  flex: 2; /* Make this picture twice as flexible */
-  max-width: 40%; /* Limit how wide this picture can be */
-  border: 5px solid grey;
+.image-item {
+  flex: 1 1 300px; /* Each section takes equal width and adapts */
+  margin: 10px; /* Adds space between sections */
+  display: flex; /* Enable flexbox for centering */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  height: 300px; /* Set a fixed height for uniformity */
 }
 
-.image-container .image-notary img {
-  flex: 1; /* Make this picture normal flexible */
-  max-width: 20%; /* Limit how wide this picture can be */
+.image-item img {
+  max-width: 100%; /* Ensures the image doesn't overflow its container */
+  max-height: 100%; /* Ensures the image doesn't overflow its container */
+  width: auto; /* Maintains the aspect ratio */
+  height: auto; /* Maintains the aspect ratio */
 }
 
-.image-container .image-start2finish img {
-  flex: 1.5; /* Make this picture flexible, but less than the first one */
-  max-width: 30%; /* Limit how wide this picture can be */
-}
 .footer {
   position: fixed;
   bottom: 0;
