@@ -1,3 +1,16 @@
+:root {
+  --favcolor: #3498db; /* Example color */
+  --font-family: Arial, sans-serif; /* Example font family */
+}
+
+body {
+  background-image: url(../images/interlockgo_logo_gradient.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 100%;
+  font-family: var(--font-family);
+}
+
 h1 {
   text-align: center;
   text-decoration: underline;
@@ -7,14 +20,6 @@ h1 {
   font-weight: bold;
   padding: 20px;
   margin: 0;
-}
-
-body {
-  background-image: url(../images/interlockgo_logo_gradient.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-height: 100%;
-  font-family: var(--font-family);
 }
 
 h2 {
@@ -39,22 +44,22 @@ img {
 }
 
 .video-container {
-  display: flex;        /* Aligns children (sections) in a row */
-  background-color: #ccc; /* Light gray background */
-  justify-content: center; /* Centers the videos horizontally */
-  align-items: flex-start; /* Aligns videos at the top */
-  padding: 20px; /* Adds some space inside the container */
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ccc;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
 }
 
 .video {
-  flex: 1; /* Each section takes equal width */
-  margin: 10px; /* Adds space between sections */
+  flex: 1 1 300px; /* Each section takes equal width and adapts */
+  margin: 10px;
 }
 
 .video > div {
-  width: 100%; /* Makes the video div take the full width of the section */
+  width: 100%;
 }
-
 
 .owner {
   display: block;
@@ -108,19 +113,37 @@ hr {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-footer {
-  background-color: #76BC21;
-  color: #371515;
-  padding: 7px;
-  text-align: center;
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1b345d; /* Dark blue background for the footer */
+  color: white;              /* White text color */
+  text-align: center;        /* Center the text in the footer */
+  padding: 5px;             /* Space inside the footer */
+  margin-top: 10px;         /* Space above the footer */           
 }
 
-footer a {
-  color: #801919;
-  text-decoration: none;
+.footer a:hover {
+  background-color: green;   /* Change background to green when you hover over links */
+  color: white;          /* Change text color to dark blue when you hover over links */
 }
 
-footer a:hover {
-  text-decoration: underline;
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36pt;
+  }
+  h2 {
+    font-size: 20pt;
+  }
+  p {
+    font-size: 16pt;
+  }
+  button {
+    font-size: 16pt;
+    padding: 8px 16px;
+  }
+  input[type="text"], select {
+    font-size: 16pt;
+  }
 }
-
