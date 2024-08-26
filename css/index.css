@@ -57,7 +57,7 @@ nav a:last-child::after {
 
 nav a:hover {
   background-color: green;   /* Change background to green when you hover over links */
-  color: dark blue;          /* Change text color to dark blue when you hover over links */
+  color: dark rgb(172, 172, 187);          /* Change text color to dark blue when you hover over links */
 }
 
 main {
