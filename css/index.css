@@ -64,8 +64,6 @@ main {
   margin: 10px 10px;             /* Space on the sides inside the main area */
 }
 
-/* Add these styles to your index.css file */
-
 .image-container {
   display: flex;
   flex-wrap: wrap;
@@ -89,6 +87,9 @@ main {
   max-height: 100%; /* Ensures the image doesn't overflow its container */
   width: auto; /* Maintains the aspect ratio */
   height: auto; /* Maintains the aspect ratio */
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px black;
+  margin: 3em;
 }
 
 .footer {
