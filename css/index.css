@@ -1,84 +1,159 @@
 body {
-  margin: 3px;                  /* No space on the edges of the page */
-  padding: 10px;            /* Space on the top and bottom inside the page */
+  margin: 0;                   /* No space on the edges of the page */
+  padding: 10px;               /* Space on the top and bottom inside the page */
   font-family: 'Times New Roman', serif;  /* The style of the writing */
-  font-size: 30px;            /* How big the letters are */
-  text-decoration: underline; /* A line under the text */
+  font-size: 30px;             /* How big the letters are */
   background-image: url(../images/interlockgo_logo_gradient.png); /* Picture behind the words */
   background-attachment: fixed; 
-  background-size:cover;
+  background-size: cover;
   background-position: center;
 }
 
 header {
-  display: flex;              /* Makes things line up nicely */
-  flex-direction: column;     /* Stack things on top of each other */
-  align-items: center;        /* Center things across the page */
-  justify-content: center;    /* Center things down the page */
+  display: flex;               /* Makes things line up nicely */
+  flex-direction: column;      /* Stack things on top of each other */
+  align-items: center;         /* Center things across the page */
+  justify-content: center;     /* Center things down the page */
 }
 
+/* Existing nav styles from previous CSS */
 nav {
-  background-color: #1b345d; /* Color the navigation bar dark blue */
-  color: white;              /* Make the text color white */
-  display: flex;             /* Line up the links nicely */
-  justify-content: flex-start; /* Align links to the left */
-  padding: 5px;              /* Small space around the navigation bar */
-  align-items: center;       /* Centers items vertically within the nav */
+  background-color: #1b345d;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
-  display: flex;             /* Ensures that list items are in a row */
-  width: 100%;               /* Ensures ul takes full width of nav */
-  list-style: none;          /* Removes bullet points from list */
-  padding: 0;                /* Removes default padding */
-  margin: 0;                 /* Removes default margin */
+  display: flex;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative; /* Important for dropdown positioning */
+}
+
+nav li {
+  position: relative; /* Needed to position the dropdown properly */
 }
 
 nav a {
-  color: white;              /* Make the links white */
-  padding: 10px 15px;             /* Space around the links */
-  text-decoration: none;     /* No underline for the links */
-  position: relative;        /* Needed for positioning the pseudo-element */
-}
-
-nav a::after {
-  content: "|";              /* The separator symbol */
-  color: white;              /* Color of the separator */
-  position: left;        /* Position absolutely relative to the link */
-  right: 0;               /* Position right of the link */
-  top: 0;                    /* Align top with the link */
-}
-
-nav a:last-child::after {
-  content: none;             /* No separator after the last link */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
-  background-color: green;   /* Change background to green when you hover over links */
-  color: dark blue;          /* Change text color to dark blue when you hover over links */
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Style the dropdown menu */
+nav ul ul {
+  display: none; /* Hide the dropdown by default */
+  position: absolute; /* Position it below the parent menu item */
+  top: 100%; /* Position dropdown directly below parent */
+  left: 0; /* Align the dropdown with the parent menu */
+  background-color: #28a745; /* Same dark blue background */
+  padding: 10px 0; /* Add some space at the top and bottom */
+  min-width: 200px; /* Minimum width for the dropdown */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 0.5em
+}
+
+/* Dropdown menu items */
+nav ul ul li {
+  display: block; /* Stack dropdown items vertically */
+  width: 100%; /* Full width for dropdown items */
+}
+
+nav ul ul a {
+  padding: 10px 20px; /* More padding for dropdown links */
+  color: #1b345d; /* White text */
+  text-decoration: none;
+  display: block;     /* Ensure each link is on its own line */
+  width: 100%;        /* Take up the full width */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+nav ul ul a:hover {
+  background-color: #28a745; /* Change background to green on hover */
+  color: white;
+  border-radius: 1px;
+}
+
+/* Show dropdown when hovering over the parent */
+nav li:hover > ul {
+  display: block; /* Show the dropdown */
 }
 
 main {
-  margin: 10px 10px;             /* Space on the sides inside the main area */
-}
-
-.image-gallery {
-  background-color: light grey; /* Light grey background for pictures */
-  border: 5px solid grey;     /* Grey line around the picture area */
-  padding: 5px;               /* Small space inside the picture area */
-  margin: 10px;             /* Space above and below the picture area */
+  margin: 10px 10px;           /* Space on the sides inside the main area */
 }
 
 .image-container {
-  display: flex;              /* Line up the pictures nicely */
-  justify-content: space-around; /* Spread out the pictures evenly */
-  align-items: top;        /* Center the pictures up and down */
-  gap: 10px;                  /* Space between the pictures */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;     /* Centers the images horizontally */
+  align-items: flex-start;     /* Aligns images at the top */
+  padding: 20px;               /* Adds space inside the container */
+  background-color: transparent; /* Make the background transparent */
 }
 
-.image-container img {
-  flex: 1;                    /* Make pictures flexible in size */
-  max-width: 30%;             /* Limit how wide the pictures can be */
-  height: 50%;               /* Make the height adjust automatically */
-  margin: 0 5px;              /* Space on the sides of each picture */
+.image-item {
+  flex: 1 1 300px;             /* Each section takes equal width and adapts */
+  margin: 20px;                /* Adds space between sections */
+  display: flex;               /* Enable flexbox for centering */
+  justify-content: center;     /* Center the image horizontally */
+  align-items: center;         /* Center the image vertically */
+  height: 300px;               /* Set a fixed height for uniformity */
+  border-radius: 10px;         /* Adds a small border radius for a softer appearance */
+  transition: transform 0.3s ease-in-out; /* Smooth scaling on hover */
+}
+
+.image-item:hover {
+  transform: scale(1.05);      /* Slightly enlarge image on hover */
+}
+
+.image-item img {
+  max-width: 100%;             /* Ensures the image doesn't overflow its container */
+  max-height: 100%;            /* Ensures the image doesn't overflow its container */
+  width: auto;                 /* Maintains the aspect ratio */
+  height: auto;                /* Maintains the aspect ratio */
+  border-radius: 15px;         /* Add a more pronounced rounding for the images */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Softer shadow for a clean look */
+  transition: box-shadow 0.3s ease-in-out;    /* Smooth hover effects */
+}
+
+.image-item img:hover {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4); /* More shadow on hover for a pop effect */
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1b345d;   /* Dark blue background for the footer */
+  color: white;                /* White text color */
+  text-align: center;          /* Center the text in the footer */
+  padding: 10px;               /* Space inside the footer */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow above the footer */
+}
+
+.footer a {
+  color: white;                /* White text color */
+  text-decoration: none;       /* No underline */
+  transition: color 0.3s, background-color 0.3s; /* Smooth hover transition */
+}
+
+.footer a:hover {
+  background-color: #28a745;   /* Change background to green when you hover over links */
+  color: white;                /* Keep text white */
+  border-radius: 5px;          /* Add a slight curve to the background hover */
 }
